@@ -1,0 +1,55 @@
+
+// hidden
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+// 
+.pseudo {
+  position: absolute;
+  content: "";
+}
+
+.abs-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.abs-vertical {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn {
+  box-sizing: border-box;
+  border: 0;
+  outline: none;
+}
+
+.hover-effect {
+  opacity: 0.9;
+}
+
+
+// fonts
+.font-hel(@fw: normal) {
+  font-family: "HelveticaNeue Light", Arial, sans-serif;
+  font-weight: @fw;
+}
+
+.font-pt(@fw: normal) {
+  font-family: "HelveticaNeue Light", Arial, sans-serif;
+  font-weight: @fw;
+}
+

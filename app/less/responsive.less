@@ -1,0 +1,53 @@
+// десктопный вариант
+@media screen and (min-width: (@mobile-max-width + 1)) {
+  .container{
+    width: 1000px;
+    max-width: @conteiner-desktop-max-width;
+    min-width: @conteiner-desktop-min-width;
+    padding-left: @conteiner-desktop-padding;
+    padding-right: @conteiner-desktop-padding;
+}
+
+  .only-mobile {
+    display: none;
+  }
+  @import url(grid.less);
+  @import url(blocks/header.less);
+  @import url(blocks/nav.less);
+  @import url(blocks/main.less);
+  @import url(blocks/footer.less);
+}
+
+// мобильный вариант
+@media screen and (max-width: @mobile-max-width) {
+
+  @import url(grid-mobile.less);
+  @import url(blocks/header-mobile.less);
+  @import url(blocks/nav-mobile.less);
+  @import url(blocks/main-mobile.less);
+  @import url(blocks/footer-mobile.less);
+
+  .container {
+    padding-left: @conteiner-mobile-padding;
+    padding-right: @conteiner-mobile-padding;
+    max-width: @conteiner-mobile-max-width;
+    min-width: @conteiner-mobile-min-width;
+  }
+
+  .only-desktop {
+    display: none;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

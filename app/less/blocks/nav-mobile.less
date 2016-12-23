@@ -1,0 +1,124 @@
+.nav {
+  background-color: @main-mobile;
+}
+
+.nav .container {
+  position: relative;
+  background-color: @main-mobile;
+  font-size: 1.1em;
+  padding: 0;
+}
+
+.nav__mobile-topline {
+  min-height: 42px;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+}
+
+.nav__mobile-logo {
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__toggle-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 40px;
+  min-width: 40px;
+  height: 26px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background: transparent;
+  transform: translateY(-50%);
+}
+
+.no-js .nav__toggle-btn {
+  display: none;
+}
+
+.nav__toggle-btn:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 11px;
+  top: 4px;
+  border-radius: 4px;  
+  background-image:linear-gradient(to top right, 
+      transparent 0, transparent 40%,
+      #fff 45%, #fff 55%, 
+      transparent 60%, transparent 100%),
+    linear-gradient(to top left, 
+      transparent 0, transparent 40%,
+      #fff 45%, #fff 55%, 
+      transparent 60%, transparent 100%);
+}
+
+.closed .nav__toggle-btn:before {
+  width: auto;
+  height: 15px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+  border-radius: 2px;
+  background-image:linear-gradient(to bottom, 
+    #fff 0, #fff 20%, 
+    transparent 21%, transparent 40%,
+    #fff 41%, #fff 60%, 
+    transparent 61%, transparent 80%,
+    #fff 81%, #fff 100% );
+}
+
+
+.nav__toggle-btn:hover,
+.nav__toggle-btn:hover:before {
+  opacity: 0.95;
+}
+
+.nav__toggle-btn:active,
+.nav__toggle-btn:active:before {
+  opacity: 0.85;
+}
+
+.nav__menu {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  background-color: @main-mobile;
+  width: 100%;
+}
+
+.closed .nav__menu {
+  display: none;
+}
+
+.no-js .nav__menu {
+  position: relative;
+  display: block;
+}
+
+.nav__item {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  border-bottom: 1px solid rgba(0,0,0,0.2)
+}
+
+.nav__link,
+.nav__link:active,
+.nav__link:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  opacity: 0.85;
+}
+
