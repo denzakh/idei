@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    
+  <head>    
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Project for IDEA</title>
@@ -15,28 +14,29 @@
     <header class="header">
       <div class="header__top-line">    
         <nav class="nav closed">
-          <div class="container">
-            <div class="header__logo-box only-desktop">
-              <a href="#" class="header__logo-link" alt="Нева Трейд">
-                <img src="img/logo.png" alt="" class="header__logo-img">
-              </a>
-            </div> 
-
-            <div class="nav__mobile-topline only-mobile">
-              <a href="" class="nav__mobile-logo "><h1>Нева Трейд</h1></a>
-              <button class="nav__toggle-btn btn close" type="button"></button>
+          <div class="container  header__top-container">
+            <div class="header__menu-logo-line">  
+              <div class="header__logo-box only-desktop">
+                <a href="#" class="header__logo-link" alt="Нева Трейд">
+                  <img src="img/logo.png" alt="" class="header__logo-img">
+                </a>
+              </div> 
+              <div class="nav__mobile-topline only-mobile">
+                <a href="" class="nav__mobile-logo "><h1>Нева Трейд</h1></a>
+                <button class="nav__toggle-btn btn close" type="button"></button>
+              </div>
+              <ul class="nav__menu">
+                <li class="nav__item"><a href="#" class="nav__link active">О компании</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Лицензии</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Лифты</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Объекты</a></li>
+              </ul>
             </div>
-            <ul class="nav__menu">
-              <li class="nav__item"><a href="#" class="nav__link active">О компании</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Лицензии</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Лифты</a></li>
-              <li class="nav__item"><a href="#" class="nav__link">Объекты</a></li>
-            </ul>
-            <div class="tel-box">
-              +7 (812) 718-80-60
+            <div class="header__tel-box">
+              <a href="tel:+78127188060" class="header__tel">+7 (812) 718-80-60</a>
             </div>
           </div>
         </nav>        
@@ -44,22 +44,22 @@
 
       <div class="container header__container--1">
         <div class="header__techno-box">
-          <h3 class="header__techno-title"><span>Технологии</span> высокого подъема</h3>
+          <h3 class="header__techno-title"><span>Технологии</span> <span>высокого подъема</span></h3>
           <div class="header__techno-list">
             <div class="header__techno-item header__techno-1">
               <div class="header__techno-number">230</div>
               <div class="header__techno-text">лифтов города обслуживаем</div>
-              <div class="header__techno-btn"><a href="" class="header__btn">Лифты</a></div>
+              <div class="header__techno-btn"><a href="" class="header__btn-techno">Лифты</a></div>
             </div>
             <div class="header__techno-item header__techno-2">
               <div class="header__techno-number">67</div>
               <div class="header__techno-text">лифтов сделано нами за 5 лет</div>
-              <div class="header__techno-btn"><a href="" class="header__btn">Монтаж</a></div>
+              <div class="header__techno-btn"><a href="" class="header__btn-techno">Монтаж</a></div>
             </div>
             <div class="header__techno-item header__techno-3">
               <div class="header__techno-number">8</div>
               <div class="header__techno-text">районов города &ndash; это не предел</div>
-              <div class="header__techno-btn"><a href="" class="header__btn">Динамика</a></div>
+              <div class="header__techno-btn"><a href="" class="header__btn-techno">Динамика</a></div>
             </div>
           </div>          
         </div>
@@ -69,43 +69,51 @@
             Каждый год «МЛМ Нева трейд» побеждает в конкурсах по модернизации старого лифтового оборудования и проводит различные общественные проекты.
           </div>
           <div class="header__social-btn">
-            <a href="" class="header__btn">Тендеры</a>
-            <a href="" class="header__btn">Проекты</a>
+            <a href="" class="header__btn-social">Тендеры</a>
+            <a href="" class="header__btn-social">Проекты</a>
           </div>          
         </div>
       </div>
 
       <div class="header__smile-cloud">
-        <div class="header__sky-smile sky-smile--1"></div>
-        <div class="header__sky-smile sky-smile--2"></div>
-        <div class="header__sky-smile sky-smile--3"></div>
-        <div class="header__sky-smile sky-smile--4"></div>
-        <div class="header__sky-smile sky-smile--5"></div>
-        <div class="header__sky-smile sky-smile--6"></div>
-        <div class="header__sky-smile sky-smile--7"></div>
-        <div class="header__sky-smile sky-smile--8"></div>
-        <div class="header__sky-smile sky-smile--9"></div>
-        <div class="header__sky-smile sky-smile--10"></div>
+        <div class="header__smile-inner">
+          <div class="header__sky-smile header__sky-smile--1"></div>
+          <div class="header__sky-smile header__sky-smile--2"></div>
+          <div class="header__sky-smile header__sky-smile--3"></div>
+          <div class="header__sky-smile header__sky-smile--4"></div>
+          <div class="header__sky-smile header__sky-smile--5"></div>
+          <div class="header__sky-smile header__sky-smile--6"></div>
+          <div class="header__sky-smile header__sky-smile--7"></div>
+          <div class="header__sky-smile header__sky-smile--8"></div>
+          <div class="header__sky-smile header__sky-smile--9"></div>
+          <div class="header__sky-smile header__sky-smile--10"></div>
+        </div>
       </div>
 
       <div class="container header__container--2">
         <div class="header__gallery">
           <a href="" class="header__gallery-link"><span class="only-mobile">Галерея</span></a>
-          <div class="header__gallery-front"></div>
-          <div class="header__gallery-back"></div>
-        </div>
-        <div class="header__company"></div>
-          <h3 class="header__company-title"><span>Большая</span> <span>компания &ndash; </span> <span>это люди</span> </h3>
-          <div class="header__company-line">
-            <div class="header__company-item ">
-              <div class="header__company-number">129</div>
-              <div class="header__company-text">сотрудников</div>
-            </div>
-            <div class="header__company-item">
-              <div class="header__company-number">13</div>
-              <div class="header__company-text">подразделений</div>
-            </div>
+          <div class="header__gallery-back">
+            <img src="../img/photo1g.jpg" alt="" class="header__gallery-img">
           </div>          
+          <div class="header__gallery-front">
+            <img src="../img/photo2g.jpg" alt="" class="header__gallery-img">
+          </div>
+        </div>
+        <div class="header__company">
+          <div class="header__company-inner">
+            <h3 class="header__company-title"><span>Большая</span> <span>компания &ndash; это</span> <span>люди</span></h3>
+            <div class="header__company-line">
+              <div class="header__company-item ">
+                <div class="header__company-number">129</div>
+                <div class="header__company-text"><a href="">Сотрудников</a></div>
+              </div>
+              <div class="header__company-item">
+                <div class="header__company-number">13</div>
+                <div class="header__company-text"><a href="">Подразделений</a></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -159,14 +167,33 @@
     </main>
     <footer class="footer">
       <div class="footer__part-l">
-        +7 (812) 718-80-60
-info@mlmnevatrade.ru
 
-197227, Санкт-Петербург
-БЦ «Балтийский Деловой Центр»
-ул. Гаккелевская, д.21, оф.1010
+        <section class="footer__contact  vcard">
+          <h3 class="only-mobile">Наши контакты</h3>
+          <a href="tel:+78127188060" class="footer__tel tel">+7 (812) 718-80-60</a>
+          <a href="" class="footer__all-contact">Все контакты</a>
+          <a href="mailto:info@mlmnevatrade.ru" class="footer__email email">info@mlmnevatrade.ru</a>
 
-2011-2015 ООО «МЛМ Нева трейд» Проектирование, монтаж и эксплуатация лифтового оборудования
+          <p class="footer__address  adr">
+            <strong class="only-mobile">Адрес:</strong>
+            <span class="footer__address-line">
+              <span class="postal-code">197227</span>, <span class="locality">Санкт-Петербург</span>, 
+            </span>
+            <span class="footer__address-line">
+              <span>БЦ «Балтийский Деловой Центр»</span>
+            </span>
+            <span class="footer__address-line">
+              <span class="street-address">ул. Гаккелевская, д.21, оф.1010</span>
+            </span>
+          </p>
+
+          <p class="footer__copyright">
+            2011&ndash;2015 <span class="only-mobile fn org">ООО «МЛМ Нева трейд»</span>Проектирование, монтаж и эксплуатация лифтового оборудования
+          </p>
+            
+          </div>
+        </section>  
+
       </div>
       <div class="footer__part-r">
         <nav class="footer__nav">
