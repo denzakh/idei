@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>    
     <meta charset="utf-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Project for IDEA</title>
@@ -141,20 +141,22 @@
       </section>
       <section class="main__bottom-line">
         <div class="container">
-          <div class="mine__feedback-box-l">
-            <h3 class="mine__feedback-title"><span>Кто обслуживает лифт</span> <span>в вашем</span> <span>доме?</span></h3>
-            <div class="mine__feedback-text">
-              Развиваясь вместе с городом, мы адаптируем свою деятельность под нужды и потребности жителей Петербурга.
+          <div class="mine__feedback">
+            <div class="mine__feedback-box-l">
+              <h3 class="mine__feedback-title"><span>Кто обслуживает</span> <span> лифт в вашем</span> <br class="only-desktop"> <span>доме?</span></h3>
+              <div class="mine__feedback-text">
+                Развиваясь вместе с городом, мы адаптируем свою деятельность под нужды и потребности жителей Петербурга.
+              </div>
+              <form action="" class="mine__feedback-form">
+                <input type="text" placeholder="Ваше имя">
+                <input type="text" placeholder="Адрес">
+                <button class="mine__feedback-btn"><span class="only-mobile">Отправить</span></button>
+              </form>          
             </div>
-            <form action="" class="mine__feedback-form">
-              <input type="text" placeholder="Ваше имя">
-              <input type="text" placeholder="Адрес">
-              <button class="mine__feedback-btn"><span class="only-mobile">Отправить</span></button>
-            </form>          
-          </div>
-          <div class="mine__feedback-box-r">
-            <a href="" class="mine__feedback-link">Жалоба</a>
-            <a href="" class="mine__feedback-link">Вопрос по лифту</a>
+            <div class="mine__feedback-box-r">
+              <a href="" class="mine__feedback-link">Жалоба</a>
+              <a href="" class="mine__feedback-link">Вопрос по лифту</a>
+            </div>
           </div>
           <div class="mine__smile-box">
             <div class="mine__smile-text">
@@ -166,59 +168,59 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__part-l">
+      <div class="container">
+        <div class="footer__part-l">
+          <section class="footer__contact  vcard">
+            <h3 class="only-mobile">Наши контакты</h3>
+            <a href="tel:+78127188060" class="footer__tel tel">+7 (812) 718-80-60</a>
+            <a href="" class="footer__all-contact">Все контакты</a>
+            <a href="mailto:info@mlmnevatrade.ru" class="footer__email email">info@mlmnevatrade.ru</a>
 
-        <section class="footer__contact  vcard">
-          <h3 class="only-mobile">Наши контакты</h3>
-          <a href="tel:+78127188060" class="footer__tel tel">+7 (812) 718-80-60</a>
-          <a href="" class="footer__all-contact">Все контакты</a>
-          <a href="mailto:info@mlmnevatrade.ru" class="footer__email email">info@mlmnevatrade.ru</a>
+            <p class="footer__address  adr">
+              <strong class="only-mobile">Адрес:</strong>
+              <span class="footer__address-line">
+                <span class="postal-code">197227</span>, <span class="locality">Санкт-Петербург</span>, 
+              </span>
+              <span class="footer__address-line">
+                <span>БЦ «Балтийский Деловой Центр»</span>
+              </span>
+              <span class="footer__address-line">
+                <span class="street-address">ул. Гаккелевская, д.21, оф.1010</span>
+              </span>
+            </p>
 
-          <p class="footer__address  adr">
-            <strong class="only-mobile">Адрес:</strong>
-            <span class="footer__address-line">
-              <span class="postal-code">197227</span>, <span class="locality">Санкт-Петербург</span>, 
-            </span>
-            <span class="footer__address-line">
-              <span>БЦ «Балтийский Деловой Центр»</span>
-            </span>
-            <span class="footer__address-line">
-              <span class="street-address">ул. Гаккелевская, д.21, оф.1010</span>
-            </span>
-          </p>
-
-          <p class="footer__copyright">
-            2011&ndash;2015 <span class="only-mobile fn org">ООО «МЛМ Нева трейд»</span>Проектирование, монтаж и эксплуатация лифтового оборудования
-          </p>
-            
+            <p class="footer__copyright">
+              2011&ndash;2015 <span class="only-mobile fn org">ООО «МЛМ Нева трейд»</span>Проектирование, монтаж и эксплуатация лифтового оборудования
+            </p>
+              
+            </div>
+          </section> 
+        </div>
+        <div class="footer__part-r">
+          <nav class="footer__nav">
+            <ul class="nav__list-l">
+              <li class="footer__nav-item"><a href="#" class="footer__nav-link">История и миссия</a></li>
+              <li class="footer__nav-item"><a href="#" class="footer__nav-link">Сотрудники</a></li>
+              <li class="footer__nav-item"><a href="#" class="footer__nav-link">Подразделения</a></li>
+              <li class="footer__nav-item"><a href="#" class="footer__nav-link">Партнёрство</a></li>
+              <li class="footer__nav-item"><a href="#" class="footer__nav-link">Фотогалерея</a></li>
+              <li class="footer__nav-item"><a href="#" class="footer__nav-link">Новости</a></li>
+            </ul>
+            <ul class="nav__list-l">
+              <li class="footer__nav-item"><a href="#" class="footer__nav-link">Лифты</a></li>
+              <li class="footer__nav-item"><a href="#" class="footer__nav-link">Безопасность</a></li>
+              <li class="footer__nav-item"><a href="#" class="footer__nav-link">Полезная информация</a></li>
+              <li class="footer__nav-item"><a href="#" class="footer__nav-link">Монтаж лифтов</a></li>
+              <li class="footer__nav-item"><a href="#" class="footer__nav-link">Модернизация</a></li>
+              <li class="footer__nav-item"><a href="#" class="footer__nav-link">Социальные проекты</a></li>
+            </ul>  
+          </nav>
+          <div class="footer__part-studio">
+            <a href="" class="footer__studio-link">
+              <span>Создание сайта</span>
+              <span>студия «IDEI»</span>  
+            </a>
           </div>
-        </section>  
-
-      </div>
-      <div class="footer__part-r">
-        <nav class="footer__nav">
-          <ul class="nav__list-l">
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">История и миссия</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Сотрудники</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Подразделения</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Партнёрство</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Фотогалерея</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Новости</a></li>
-          </ul>
-          <ul class="nav__list-l">
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Лифты</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Безопасность</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Полезная информация</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Монтаж лифтов</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Модернизация</a></li>
-            <li class="footer__nav-item"><a href="#" class="footer__nav-link">Социальные проекты</a></li>
-          </ul>  
-        </nav>
-        <div class="footer__part-studio">
-          <a href="" class="footer__studio-link">
-            <span>Создание сайта</span>
-            <span>студия «IDEI»</span>  
-          </a>
         </div>
       </div>
     </footer>

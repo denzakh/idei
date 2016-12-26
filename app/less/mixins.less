@@ -95,3 +95,43 @@
   box-shadow: 0 0 0 1px rgba(0,0,0,0.03);
 }
 
+.enter-btn (@this-color: #000) {
+  .hover-effect;
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border: 4px solid @this-color;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:after {
+    .pseudo;
+    width: 22px;
+    height: 22px;
+    // margin-top: 12px;
+    // margin-left: 5px;
+    left: 5px;
+    top: 12px;
+    border-bottom: 4px solid @this-color;
+    border-right: 4px solid @this-color;
+    transform: rotate(-45deg);
+  }
+}
+
+.link-color(@color-link: #000) {
+  color: @color-link;
+
+  &:active {
+    color: @color-link;
+  }
+
+  &:visited {
+    color: @color-link;
+  }
+
+  &:hover {
+    color: @color-link;
+    opacity: 0.9;
+  }
+}
+

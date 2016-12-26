@@ -1,4 +1,3 @@
-
 .main__middle-line {
   position: relative;
   min-height: 247px;
@@ -36,4 +35,144 @@
   .font-hel;
   font-size: 60px;
   line-height: 60px;
+}
+
+// bottom line
+
+.main__bottom-line {
+  background-image: url("../img/bg-main.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat; 
+}
+
+.mine__feedback {
+  display: flex;
+}
+
+.mine__feedback-box-l {
+  width: 50%;
+}
+
+.mine__feedback-title {
+  .header-big;
+  color: @c-brown-numbers;
+  padding-top: 72px;
+  padding-left: 12px;
+
+  & span {
+    background-color: @c-light-brown;
+    padding-left: 10px;
+  }
+}
+
+.mine__feedback-text {
+  padding: 25px;
+  padding-right: 100px;
+}
+
+.mine__feedback-form {
+  padding-top: 16px;
+  padding-left: 26px;
+}
+
+.mine__feedback-form input {
+  display: inline-block;
+  vertical-align: top;
+  border: 4px solid #fff;
+  min-width: 310px;
+  min-height: 58px;
+  margin-bottom: 22px;
+  margin-right: 10px;
+  font-size: 20px;
+  line-height: 20px;
+  color: #fff;
+  padding: 10px 15px;
+  background-color: transparent;
+
+  // стилизация плейсхолдера
+  &::-webkit-input-placeholder{color: #fff; opacity: 0.9;}
+  &::-moz-placeholder{color: #fff; opacity: 0.9;}
+  &:-moz-placeholder{color: #fff; opacity: 0.9;}
+  &::-ms-input-placeholder{color: #fff; opacity: 0.9;}
+  // исчезновение плейсхолдера
+  &:focus::-webkit-input-placeholder {color: transparent}
+  &:focus::-moz-placeholder          {color: transparent}
+  &:focus:-moz-placeholder           {color: transparent}
+  &:focus:-ms-input-placeholder      {color: transparent}
+  // анимация
+  &::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
+  &::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
+  &:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
+  &:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
+  &:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.3s ease;}
+  &:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 0.3s ease;}
+  &:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 0.3s ease;}
+  &:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 0.3s ease;}
+}
+
+.mine__feedback-btn {
+  .enter-btn(#fff);
+}
+
+.mine__feedback-box-r {
+  width: 50%;
+  padding-top: 284px;
+  padding-left: 95px;
+}
+
+.mine__feedback-link {
+  .font-hel;
+  .link-color;
+  position: relative;
+  display: block;
+  font-size: 40px;
+  line-height: 65px;
+}
+
+.mine__feedback-link:first-child:before {
+  .pseudo;
+  width: 52px;
+  height: 47px;
+  left: -70px;
+  top: 6px;
+  background: url("../img/warning.png");
+}
+
+.mine__smile-box {
+  width: 810px;
+  min-height: 150px;
+  margin: 0 auto;
+  background-image: url("../img/smile-half.png");
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  text-align: right;
+  padding-top: 16px;  
+}
+
+.mine__smile-text {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  width: 324px;
+  padding: 14px 23px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  font-style: italic;
+
+  &:after {
+    .pseudo;
+    width: 40px;
+    height: 23px;
+    bottom: -23px;
+    left: 18px;
+    background-image: linear-gradient(to bottom right, #fff 0, #fff 50%, transparent 51%, transparent 100%);
+    transform: skewX(-10deg);
+    
+  }
+}
+
+.mine__smile-link {
+  color: #000;
 }
