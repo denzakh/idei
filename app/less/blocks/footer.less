@@ -1,0 +1,91 @@
+.footer {
+  // min-height: 215px;
+  background-color: @c-bottom-blue;
+  padding-top: 30px;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+// левая часть
+
+.footer__part-l {
+  position: relative;
+  width: 445px;
+
+  &:before {
+    .pseudo;
+    width: 104px;
+    height: 76px;
+    top: 0;
+    left: -11px;
+    background: url("../img/logo-footer.png") no-repeat;  
+  }
+}
+
+.footer__part-l-inner {
+  position: relative;
+}
+
+.footer__contact {
+  margin-left: 140px;
+}
+
+.footer__contact p {
+  margin: 0;
+}
+
+.footer__contact a {
+  .link-color(#fff);
+}
+
+.footer__tel-mail {
+  font-size: 17px;
+  line-height: 22px;
+  color: #fff;  
+}
+
+.footer__all-contact {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 14px;
+  line-height: 21px;
+  font-style: italic;
+}
+
+.footer__address {
+  padding-top: 17px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  line-height: 21px;
+  color: #fff;  
+}
+
+// 12й шрифт Calibri в макете - явная ошибка
+.footer__copyright {
+  font-size: 11px;
+  line-height: 11px;
+  color: #000;
+  letter-spacing: -0.5px;
+}
+
+.footer__copyright span {
+  display: inline;
+}
+
+.footer__rank {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+}
+
+// правая часть
+
+.footer__part-r {
+  width: 50%;
+  min-width: 500px;
+}
+
+
