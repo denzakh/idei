@@ -1,9 +1,8 @@
 .header {
+  position: relative;
   padding-top: 20px;
   min-height: 1410px;
-  background: url("../img/bg-header.jpg") 50% 0  no-repeat;
-
-  
+  background: url("../img/bg-header.jpg") 50% 0  no-repeat;  
 }
 
 .header__logo-img {
@@ -215,6 +214,18 @@
 
 .header__container--2 {
   display: flex;
+  position: relative;
+
+  &:after {
+    .pseudo;
+    width: 665px;
+    height: 288px;
+    bottom: -342px;
+    right: -165px;
+    background: url("../img/car-8.png") no-repeat;  
+    z-index: 2; 
+    outline: 1px solid red; 
+  }
 }
 
 .header__gallery {
