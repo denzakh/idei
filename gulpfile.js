@@ -15,6 +15,7 @@ var clean = require('gulp-clean');
 var ftp = require('gulp-ftp'); 
 var realFavicon = require ('gulp-real-favicon');
 var plumber = require('gulp-plumber');
+var run = require("run-sequence");
 var fs = require('fs');
 
 
@@ -26,48 +27,24 @@ gulp.task('clean', function () {
   .pipe(clean());
 });
 
-// копируем шрифты
-gulp.task('fonts', ['clean'], function () {
-  return gulp.src('app/fonts/*.*')
-  .pipe(gulp.dest('dist/fonts/'))
-});
-
-// минифицируем графику и сохраняем в папку для
-// продакшена, c предварительно добавленными шрифтами
-gulp.task('image', ['fonts'], function () {
+// минифицируем графику и сохраняем в папку для продакшена
+gulp.task('image', function () {
   return gulp.src('app/img/**')
   .pipe(imagemin())
   .pipe(gulp.dest('dist/img/'))
 });
 
-// собираем весь проект для продакшена:
-gulp.task('build', ['image'], function () {
-  var assets = useref.assets();
-  return gulp.src('app/*.html')
-  .pipe(plumber()) // plumber
-  .pipe(assets)
-  .pipe(gulpif('*.js', uglify()))
-  .pipe(gulpif('*.css', minifyCss()))
-  .pipe(assets.restore())
-  .pipe(useref())
-  .pipe(gulp.dest('dist'))
-});
-
-// Отправка собранного проекта на хостинг:
-// очищает папку dist, собирает в нее проект по новой и отправляет на хостинг
-gulp.task('ftp', ['build'], function () {
-
-  var ftpObj = {
-          host: 'denzakh.ru',
-          user: 'fenixx83_soline',
-          pass: ''
-      };  
-
-  // чтение файла с паролем
-  ftpObj.pass = fs.readFileSync('psw.txt','utf8');  
-
-  return gulp.src('dist/**/*')
-    .pipe(ftp(ftpObj))
+// копирование шрифтов
+gulp.task('copy', function() {
+  return gulp.src([
+    "app/fonts/**/*.{woff,woff2}",
+    "app/*.html",
+    "app/css/**",
+    "app/js/**",   
+  ], {
+    base: "app"
+  })
+  .pipe(gulp.dest("dist"));
 });
 
 // запуск локального сервера
@@ -82,26 +59,7 @@ gulp.task('webserver', function() {
   }));
 });
 
-// Создание спрайтов - png and less files
-gulp.task('sprite', function () {
-  var spriteData = gulp.src('app/img/sprite/*.*')
-  .pipe(spritesmith({
-    imgName: 'sprite.png',
-    imgPath: '../img/sprite.png',
-    cssName: 'sprite.less'
-  }));
-
-  spriteData.img
-  // .pipe(imagemin()) //графика будет минифицирована при сборке на продакшн
-  .pipe(gulp.dest('app/img/'))
-  .pipe(notify("Sprite rebuild!"));;
-
-  return spriteData.css
-  .pipe(gulp.dest('app/less/'));
-});
-
-// Компиляция less. 
-// При ошибке в компиляции падает gulp, нужен перезапуск
+// компиляция less. 
 gulp.task('less', function () {
   return gulp.src('app/less/style.less')
   .pipe(less())
@@ -109,18 +67,37 @@ gulp.task('less', function () {
     browsers: ['last 5 versions'],
     cascade: false
   }))
-    .pipe(minifyCss())
-    .pipe(rename('style.min.css'))
+  .pipe(gulp.dest('app/css'))
+  .pipe(minifyCss())
+  .pipe(rename('style.min.css'))
   .pipe(gulp.dest('app/css'))
   .pipe(notify("Less скомпилирован!"));
 });
 
-// Отслеживаем изменения в проекте 
-// less перекомпилирует по новой css,
-// sprite отслеживает появление новой графики для переклеивания спрайта
-gulp.task('watch', function (){
-  gulp.watch('app/less/**/*.less', ['less']);
-  gulp.watch('app/img/sprite/*.*', ['sprite']);
+// минифицируем js 
+gulp.task('js', function () {
+  return gulp.src('app/js/app.js')
+  .pipe(uglify())
+  .pipe(rename("app.min.js"))
+  .pipe(gulp.dest('app/js/'))
 });
 
-gulp.task('default', ['webserver', 'sprite', 'less', 'watch']);
+// отслеживаем изменения в проекте 
+gulp.task('watch', function (){
+  gulp.watch('app/less/**/*.less', ['less']);
+  gulp.watch('app/js/app.js', ['js']);
+});
+
+gulp.task('default', ['webserver', 'less', 'js', 'watch']);
+
+// запуск сборки
+gulp.task("build", function(fn) {
+  run(
+    "clean",
+    "less",
+    "js",
+    "image",
+    "copy",
+    fn
+  );
+});
