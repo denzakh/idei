@@ -1,5 +1,5 @@
 node_modules
-dist
+# dist
 psw.txt
 app/css
 app/bower_components
