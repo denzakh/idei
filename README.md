@@ -8,6 +8,9 @@
 
 ## Запуск
 
-* Установка: mpm i
-* Запуск: mpm start
-* Сборка: mpm run build
+* Установка: 
+`mpm i`
+* Запуск: 
+`mpm start`
+* Сборка: 
+`mpm run build`
