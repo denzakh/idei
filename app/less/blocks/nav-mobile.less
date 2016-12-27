@@ -1,5 +1,9 @@
 .nav {
+  background-color: @c-sky-blue;
+}
 
+.header .nav a {
+  .link-color(#fff);
 }
 
 .nav .container {
@@ -13,13 +17,21 @@
   position: relative;
   text-align: center;
   padding: 10px;
+
 }
 
 .nav__mobile-logo {
-  font-weight: bold;
-  color: #fff;
+  .font-hel;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.nav__mobile-logo h1 {
+  margin: 0;
+  padding: 10px;
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: -1px;
 }
 
 .nav__toggle-btn {
@@ -27,7 +39,6 @@
   right: 10px;
   top: 50%;
   width: 40px;
-  min-width: 40px;
   height: 26px;
   border: 1px solid #fff;
   border-radius: 4px;
@@ -89,6 +100,7 @@
   padding: 0;
   position: absolute;
   width: 100%;
+  background-color: @c-sky-blue;
 }
 
 .closed .nav__menu {

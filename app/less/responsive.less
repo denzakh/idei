@@ -6,6 +6,7 @@
     min-width: @conteiner-desktop-min-width;
     padding-left: @conteiner-desktop-padding;
     padding-right: @conteiner-desktop-padding;
+    margin: 0 auto;
 }
 
   .only-mobile {
@@ -27,15 +28,23 @@
   @import url(blocks/main-mobile.less);
   @import url(blocks/footer-mobile.less);
 
-  .container {
+  .container,
+  .mobile-container {
     padding-left: @conteiner-mobile-padding;
     padding-right: @conteiner-mobile-padding;
     max-width: @conteiner-mobile-max-width;
     min-width: @conteiner-mobile-min-width;
+    margin: 0 auto;
   }
 
   .only-desktop {
     display: none;
+  }
+
+  h3 {
+    .font-hel;
+    font-weight: bold;
+    margin-top: 1.5em;
   }
 
 }

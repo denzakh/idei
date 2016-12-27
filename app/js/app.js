@@ -10,16 +10,16 @@ document.addEventListener("DOMContentLoaded", nojsreplace);
 
 
 // открытие и закрытие меню
-// if ( (document.querySelector(".nav") != null) &&
-//      (document.querySelector(".nav__toggle-btn") != null) ) {
+if ( (document.querySelector(".nav") != null) &&
+     (document.querySelector(".nav__toggle-btn") != null) ) {
 
-//     // переменные
-//     var nav = document.querySelector(".nav");
-//     var toogle = document.querySelector(".nav__toggle-btn");
-//     // меняем
-//     toogle.addEventListener("click", function(event) {
-//       // меняем класс
-//       nav.classList.toggle("closed");
-//         });
+    // переменные
+    var nav = document.querySelector(".nav");
+    var toogle = document.querySelector(".nav__toggle-btn");
+    // меняем
+    toogle.addEventListener("click", function(event) {
+      // меняем класс
+      nav.classList.toggle("closed");
+        });
 
-// }
+}

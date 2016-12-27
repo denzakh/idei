@@ -23,7 +23,7 @@
               </div> 
               <div class="nav__mobile-topline only-mobile">
                 <a href="" class="nav__mobile-logo "><h1>Нева Трейд</h1></a>
-                <button class="nav__toggle-btn btn close" type="button"></button>
+                <button class="nav__toggle-btn close" type="button"></button>
               </div>
               <ul class="nav__menu">
                 <li class="nav__item"><a href="#" class="nav__link active">О компании</a></li>
@@ -35,7 +35,7 @@
                 <li class="nav__item"><a href="#" class="nav__link">Объекты</a></li>
               </ul>
             </div>
-            <div class="header__tel-box">
+            <div class="header__tel-box  only-desktop">
               <a href="tel:+78127188060" class="header__tel">+7 (812) 718-80-60</a>
             </div>
           </div>
@@ -92,18 +92,21 @@
 
       <div class="container header__container--2">
         <div class="header__gallery">
-          <a href="" class="header__gallery-link"><span class="only-mobile">Галерея</span></a>
+          <h3 class="only-mobile">Галерея</span></h3>
+          <a href="" class="header__gallery-link"></a>
           <div class="header__gallery-back">
             <img src="img/photo1g.jpg" alt="" class="header__gallery-img">
           </div>          
           <div class="header__gallery-front">
             <img src="img/photo2g.jpg" alt="" class="header__gallery-img">
           </div>
+          <a href="" class="only-mobile">Посмотреть все фото</a>
         </div>
         <div class="header__company">
           <div class="header__company-inner">
             <h3 class="header__company-title"><span>Большая</span> <span>компания &ndash; это</span> <span>люди</span></h3>
             <div class="header__company-line">
+              <div class="only-mobile  header__company-subtitle">В нашей компании трудятся:</div>
               <div class="header__company-item ">
                 <div class="header__company-number">129</div>
                 <div class="header__company-text"><a href="">Сотрудников</a></div>
@@ -120,7 +123,8 @@
     
     <main class="main">
       <section class="main__middle-line">
-        <div class="main__middle-inner">
+        <div class="main__middle-inner mobile-container">
+          <div class="only-mobile  main__middle-subtitle">В том числе:</div>
           <div class="main__middle-item">
             <div class="main__middle-number">54</div>
             <div class="main__middle-text">сотрудника в отделе сервиса и модернизации</div>
@@ -154,11 +158,19 @@
               </form>          
             </div>
             <div class="mine__feedback-box-r">
-              <a href="" class="mine__feedback-link">Жалоба</a>
-              <a href="" class="mine__feedback-link">Вопрос по лифту</a>
+              <span class="only-mobile">Вы можете отправить нам </span>
+              <a href="" class="mine__feedback-link">
+                <span class="only-mobile">жалобу</span>
+                <span class="only-desktop">Жалоба</span>
+              </a>
+              <span class="only-mobile">или задать </span>
+              <a href="" class="mine__feedback-link">
+                <span class="only-mobile">вопрос по лифту</span>
+                <span class="only-desktop">Вопрос по лифту</span>
+              </a>
             </div>
           </div>
-          <div class="mine__smile-box">
+          <div class="mine__smile-box only-desktop">
             <div class="mine__smile-text">
               Многим интересно, почему у нас в логотипе смайлик. 
               <a href="" class="mine__smile-link">Объясняем</a>)
@@ -172,11 +184,17 @@
         <div class="footer__part-l">
           <div class="footer__part-l-inner">
             <section class="footer__contact  vcard">
-              <h3 class="only-mobile">Наши контакты</h3>
+              <h3 class="only-mobile footer__logo">Наши контакты</h3>
               <p class="footer__tel-mail">
-                <a href="tel:+78127188060" class="footer__tel tel">+7&nbsp;(812)&nbsp;718-80-60</a>
-                <a href="" class="footer__all-contact">Все контакты</a>
-                <a href="mailto:info@mlmnevatrade.ru" class="footer__email email">info@mlmnevatrade.ru</a>
+                <span class="footer__tel-box">
+                  <span class="only-mobile">Тел: </span>
+                  <a href="tel:+78127188060" class="footer__tel tel">+7&nbsp;(812)&nbsp;718-80-60</a>
+                </span>                  
+                <a href="" class="footer__all-contact only-desktop">Все контакты</a>
+                <span class="footer__email-box">
+                  <span class="only-mobile">Email: </span>
+                  <a href="mailto:info@mlmnevatrade.ru" class="footer__email email">info@mlmnevatrade.ru</a>
+                </span>                  
               </p>
               <p class="footer__address  adr">
                 <strong class="only-mobile">Адрес:</strong>
@@ -193,14 +211,16 @@
               <p class="footer__copyright">
                 <span>2011&ndash;2015</span> <span class="fn org">ООО «МЛМ Нева трейд»</span>
                 <span>Проектирование, монтаж и эксплуатация лифтового оборудования</span>
-              </p>              
+              </p>
+              <a href="" class="footer__all-contact only-mobile">Полная контактная информация</a>              
             </section>
-            <div class="footer__rank">
+            <div class="footer__rank only-desktop">
               <img src="img/metrica.png" alt="">
             </div> 
           </div> 
         </div>
         <div class="footer__part-r">
+          <h3 class="only-mobile">Карта сайта</h3>
           <nav class="footer__nav">
             <ul class="footer__nav-list">
               <li class="footer__nav-item"><a href="#" class="footer__nav-link">История и миссия</a></li>
